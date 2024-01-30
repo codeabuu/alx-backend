@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-'''using lifo'''
+'''using lifo in this code'''
 
 
 BaseCaching = __import__('base_caching').BaseCaching
 
 
 class LIFOCache(BaseCaching):
-    '''LIFO class'''
+    '''LIFO class desc'''
 
     def __init__(self):
-        '''Init function'''
+        '''Init function for inh'''
         super().__init__()
 
     def put(self, key, item):
-        '''Put function'''
+        '''Put function self item'''
         if key is None or item is None:
             return
 
@@ -25,7 +25,7 @@ class LIFOCache(BaseCaching):
         self.cache_data[key] = item
 
     def get(self, key):
-        '''get func'''
+        '''finally get func'''
         if key is None or key not in self.cache_data.keys():
             return None
         return self.cache_data.get(key)
