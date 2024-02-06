@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 '''Instantiate the Babel object in your app'''
 
-from flask import Flask, render_template
-from flask_babel import Babel, _request_ctx_stack, request
+from flask import Flask, render_template, request
+from flask_babel import Babel
 
 app = Flask(__name__)
 babel = Babel(app)
@@ -22,7 +22,7 @@ app.config.from_object(Config)
 def get_locale():
     '''Get locale from request'''
     return request.accept_languages.best_match(
-            app.config[LANGUAGES])
+        app.config['LANGUAGES'])
 
 
 @app.route('/')
