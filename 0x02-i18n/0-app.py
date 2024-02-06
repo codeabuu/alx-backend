@@ -11,6 +11,6 @@ app = Flask("__name__")
 @app.route('/')
 def index():
     '''fucntion to call our index.html'''
-    return rnder_template('index.html')
-if __name == "__main--":
+    return render_template('index.html')
+if __name__ == "__main--":
     app.run(debug=True)
