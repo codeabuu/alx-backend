@@ -2,7 +2,7 @@
 '''Instantiate the Babel object in your app'''
 
 from flask import Flask, render_template
-from flask_babel import Babel, _request_ctx_stack
+from flask_babel import Babel, _request_ctx_stack, request
 
 app = Flask(__name__)
 babel = Babel(app)
